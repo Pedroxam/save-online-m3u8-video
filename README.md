@@ -1,15 +1,26 @@
 # save-online-m3u8-video
-Save and Record online m3u and m3u8 Videos
+Record and preview online m3u8 and m3u Videos.
 
-Please make sure latest ffmpeg module installed on your server.
+Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</b> installed on your server.
 
+<h2>Record M3U8 and M3U Videos</h2>
+
+<h2>Preivew While recording</h2>
+
+<h2>Live FFmpeg Logs</h2>
 
 <img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/shot.png">
 
 
-Credits:
+<h3>Credits:</h3>
 
-php
-ffmpeg
-bootstrap
-jquery
+<ul>
+<li>php</li>
+<li>ffmpeg</li>
+<li>bootstrap</li>
+<li>jquery</li>
+<li>hls</li>
+</ul>
+
+
+
