@@ -18,7 +18,7 @@ Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg
 
 <h3>Windows Notes:</h3>
 
-- For stopping ffmepg in windows, i put a simple excutable file called "pskill.exe". for use this file, first open and select agree of use.
+- For stopping ffmpeg in windows, i put a simple excutable file called "pskill.exe". for use this file, first open and select agree of use.
 
 <h3>Credits:</h3>
 
