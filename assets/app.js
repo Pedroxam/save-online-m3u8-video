@@ -95,6 +95,7 @@ $(document).ready(function(){
 
 					$('.log').show();
 					$('.preview').show();
+					$('.timer').show();
 					$('#stop').removeClass('disabled');
 
 					SetProgressStart(m3u8);
@@ -111,13 +112,26 @@ $(document).ready(function(){
 			url:'./stop.php'
 		})
 			.done(function(result){
+				
+				var timer = parseInt($('#timer').html()),
+					split = parseInt($('#time').val());
+					
+					calculate = parseInt(timer/split);
+				
+					if(calculate !== 0 && calculate >= 1){
+						
 					var q = confirm('Do you want to cancat videos?');
-					if (q == true) {
-						concatVideos();
+						if (q == true) {
+							concatVideos();
+						}
+						else {
+							location.reload();
+						}
+						
 					}
 					else {
-						location.reload();
-					}
+							location.reload();
+						}
 			});
 	});
 });
