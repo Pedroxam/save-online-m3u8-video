@@ -29,6 +29,9 @@ function SetProgressStart(m3u8) {
 	doProgress = setInterval( showProgress, 5000 );
 }
 
+/*
+ * FFmpeg Log
+*/
 function showProgress(){
 	$.ajax({
 		type:'POST',
@@ -39,6 +42,19 @@ function showProgress(){
 	})
 		.done(function(content){
 			$('.log').html(content);
+		});
+}
+
+/*
+ * Concat Videos
+*/
+function concatVideos(){
+	$.ajax({
+		type:'POST',
+		url:'./concat.php'
+	})
+		.done(function(content){
+			location.reload();
 		});
 }
 
@@ -92,10 +108,19 @@ $(document).ready(function(){
 	$('#stop').click(function(){
 		$.ajax({
 			type:'POST',
+			dataType: 'json',
 			url:'./stop.php'
 		})
 			.done(function(result){
-				location.reload();
+				if(result.concat){
+					var q = confirm('Do you want to cancat videos?');
+					if (q == true) {
+						concatVideos();
+					}
+					else {
+						location.reload();
+					}
+				}
 			});
 	});
 });
