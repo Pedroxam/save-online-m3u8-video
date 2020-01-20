@@ -19,7 +19,7 @@ if (!filter_var($url, FILTER_VALIDATE_URL)) {
     exit('error');
 }
 
-$output = $root . '/output/' . time();
+$output = $root . '/output/' . time() . '_';
 
 $time = intval($_POST['time']);
 
