@@ -12,7 +12,20 @@ var doProgress;
 /**
  * Set Start Progress Encode Video
  */
-function SetProgressStart() {
+function SetProgressStart(m3u8) {
+	
+	  if(Hls.isSupported()) {
+		  var video = document.getElementById('video');
+		  video.volume = 1.0;
+		  var hls = new Hls();
+		  var m3u8Url = decodeURIComponent(m3u8)
+		  hls.loadSource(m3u8Url);
+		  hls.attachMedia(video);
+		  hls.on(Hls.Events.MANIFEST_PARSED,function() {
+			video.play();
+		  });
+		}
+		
 	doProgress = setInterval( showProgress, 5000 );
 }
 
@@ -63,9 +76,10 @@ $(document).ready(function(){
 					}, 1000);
 
 					$('.log').show();
+					$('.preview').show();
 					$('#stop').removeClass('disabled');
 
-					SetProgressStart();
+					SetProgressStart(m3u8);
 				}
 			});
 	});
