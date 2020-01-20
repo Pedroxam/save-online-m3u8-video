@@ -16,6 +16,10 @@ Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg
 <img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/preview.png">
 
 
+<h3>Windows Notes:</h3>
+
+- For stopping ffmepg in windows, i put a simple excutable file called "pskill.exe". for use this file, first open and select agree of use.
+
 <h3>Credits:</h3>
 
 <ul>
