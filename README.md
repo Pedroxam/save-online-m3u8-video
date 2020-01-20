@@ -9,7 +9,7 @@ Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg
 
 <h2>Live FFmpeg Logs</h2>
 
-<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/shot.png">
+<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/preview.png">
 
 
 <h3>Credits:</h3>
