@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Online m3u8 video saver</title>
+    <title>FFmpeg Command Execution</title>
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
 		.preview{display:none;}
@@ -37,6 +37,11 @@
                 <div class="form-group">
                     <label for="url">Enter m3u8 URL</label>
                     <input type="text" id="url" class="form-control" placeholder="http://">
+                </div>
+
+                <div class="form-group">
+                    <label for="time">Split video by time (in seconds)</label>
+                    <input type="number" id="time" class="form-control" value="60">
                 </div>
 
                 <div class="col-md-12 text-center my-2">
