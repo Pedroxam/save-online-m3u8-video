@@ -108,11 +108,9 @@ $(document).ready(function(){
 	$('#stop').click(function(){
 		$.ajax({
 			type:'POST',
-			dataType: 'json',
 			url:'./stop.php'
 		})
 			.done(function(result){
-				if(result.concat){
 					var q = confirm('Do you want to cancat videos?');
 					if (q == true) {
 						concatVideos();
@@ -120,7 +118,6 @@ $(document).ready(function(){
 					else {
 						location.reload();
 					}
-				}
 			});
 	});
 });
