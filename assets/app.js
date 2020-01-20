@@ -48,6 +48,7 @@ $(document).ready(function(){
 	 */
 	$('#start').click(function(){
 		var m3u8 = $('#url').val();
+		var time = $('#time').val();
 		var that = this;
 
 		if(m3u8 === "") {
@@ -60,7 +61,8 @@ $(document).ready(function(){
 			type:'POST',
 			url:'./start.php',
 			data: {
-				url: m3u8
+				url: m3u8,
+				time: time
 			}
 		})
 			.done(function(result){
