@@ -5,8 +5,8 @@
     <title>FFmpeg Command Execution</title>
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
-		.preview{display:none;}
-        .log{display:none;white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
+		.preview,.timer,.log{display:none;}
+        .log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
     </style>
 </head>
 <body class="my-3" style="background:#EEE;">
@@ -53,12 +53,11 @@
                     </button>
                 </div>
 
-                <div class="mt-3">
-                    <div id="timer" class="text-center text-danger"></div>
+                <div class="mt-3" class="timer">
+					Elapsed Time: <span id="timer" class="text-center text-danger"></span>
                 </div>
 
                 <hr/>
-
 
                 <h5 class="text-muted text-center">Log contents</h5>
                 <div class="col-md-12 mt-4">
