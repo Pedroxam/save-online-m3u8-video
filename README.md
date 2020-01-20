@@ -1,9 +1,13 @@
 # save-online-m3u8-video
-Record and preview online m3u8 and m3u Videos.
+Record and preview online m3u8 and m3u Videos, including split videos by time.
+
+You can record any online m3u8 videos with specfield time.
 
 Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</b> installed on your server.
 
 <h2>Record M3U8 and M3U Videos</h2>
+
+<h2>Split video by time</h2>
 
 <h2>Preivew While recording</h2>
 
@@ -21,6 +25,9 @@ Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg
 <li>jquery</li>
 <li>hls</li>
 </ul>
+
+
+Enjoy
 
 
 
