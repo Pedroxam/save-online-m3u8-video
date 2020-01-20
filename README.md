@@ -3,7 +3,7 @@ Record and preview online m3u8 and m3u Videos, including split videos by time an
 
 You can record any online m3u8 videos with specfield time.
 
-Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</b> installed on your server.
+Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</a> installed on your server.
 
 Enter stream video url in first field and enter seconds time on second field. click on record button. for example if you enter 60 seconds, the video file cuts for every 60 seconds, and with stop button, you can view confirm box to set concat all files to 1 file. 
 
