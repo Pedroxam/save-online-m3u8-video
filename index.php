@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FFmpeg Command Execution</title>
+    <title>Online m3u8 video saver</title>
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
+		.preview{display:none;}
         .log{display:none;white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
     </style>
 </head>
@@ -58,6 +59,13 @@
                 <div class="col-md-12 mt-4">
                     <div id="log" class="log"></div>
                 </div>
+				
+                <h5 class="text-muted text-center">Preview</h5>
+                <div class="col-md-12 mt-4">
+                    <div id="preview" class="preview">
+						<video id="video" style="width: 100%; height: 100%;" controls></video>
+					</div>
+                </div>
 
             </div>
 
@@ -67,6 +75,7 @@
 </div><!-- container -->
 <script src="./assets/jquery.min.js"></script>
 <script src="./assets/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 <script src="./assets/app.js"></script>
 </body>
 </html>
