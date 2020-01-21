@@ -22,8 +22,8 @@ Enter stream video url in first field and enter seconds time on second field. cl
 <b style="color:blue">You can preview video while recording.</b>
 
 <h2>Live FFmpeg Logs</h2>
-<b style="color:blue">You can split videos in parts with time.</b>
-
+<b style="color:blue">You can see live ffmpeg logs.</b>
+<br/>
 <img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/preview.png">
 
 <h3>Windows Notes:</h3>
