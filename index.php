@@ -54,7 +54,8 @@
                 </div>
 
                 <div class="mt-3" class="timer">
-					Elapsed Time: <span id="timer" class="text-center text-danger"></span>
+				      <input type="hidden" id="el">
+			Elapsed Time: <span id="timer" class="text-center text-danger"></span>
                 </div>
 
                 <hr/>
