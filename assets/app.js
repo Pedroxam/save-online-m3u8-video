@@ -58,6 +58,17 @@ function concatVideos(){
 		});
 }
 
+/*
+ * Convert seconds to time
+*/
+function timeFormat(totalSeconds) {
+    hours = Math.floor(totalSeconds / 3600);
+    totalSeconds %= 3600;
+    minutes = Math.floor(totalSeconds / 60);
+    seconds = totalSeconds % 60;
+    return hours + ':' + minutes + ':' + seconds;
+}
+
 $(document).ready(function(){
 	/**
 	 * Start Record Video
@@ -89,7 +100,7 @@ $(document).ready(function(){
 				else {
 					var seconds = 0;
 					setInterval(function () {
-						$('#timer').html(seconds);
+						$('#timer').html(timeFormat(seconds));
 						seconds++;
 					}, 1000);
 
