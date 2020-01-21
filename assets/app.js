@@ -101,6 +101,7 @@ $(document).ready(function(){
 					var seconds = 0;
 					setInterval(function () {
 						$('#timer').html(timeFormat(seconds));
+						$('#el').val(seconds);
 						seconds++;
 					}, 1000);
 
@@ -124,7 +125,7 @@ $(document).ready(function(){
 		})
 			.done(function(result){
 				
-				var timer = parseInt($('#timer').html()),
+				var timer = parseInt($('#el').val()),
 					split = parseInt($('#time').val());
 					
 					calculate = parseInt(timer/split);
