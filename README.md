@@ -8,14 +8,21 @@ Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg
 Enter stream video url in first field and enter seconds time on second field. click on record button. for example if you enter 60 seconds, the video file cuts for every 60 seconds, and with stop button, you can view confirm box to set concat all files to 1 file. 
 
 <h2>Record M3U8 and M3U Videos</h2>
+<b style="color:blue">You can save most of online videos services.</b>
+
+<br/>
 
 <h2>Split video by time</h2>
+<b style="color:blue">You can split videos in parts with time.</b>
 
 <h2>Concat videos (merge videos)</h2>
+<b style="color:blue">You can merge all video parts in 1 file.</b>
 
 <h2>Preivew While recording</h2>
+<b style="color:blue">You can preview video while recording.</b>
 
 <h2>Live FFmpeg Logs</h2>
+<b style="color:blue">You can split videos in parts with time.</b>
 
 <img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/preview.png">
 
