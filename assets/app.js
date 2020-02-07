@@ -54,7 +54,9 @@ function concatVideos(){
 		url:'./concat.php'
 	})
 		.done(function(content){
-			location.reload();
+			setTimeout(function(){
+				location.reload();
+			  }, 2000);
 		});
 }
 
