@@ -7,11 +7,13 @@ Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg
 
 Enter stream video url in first field and enter seconds time on second field. click on record button. for example if you enter 60 seconds, the video file cuts for every 60 seconds, and with stop button, you can view confirm box to set concat all files to 1 file. 
 
+<br/>
+<b>Update: </b> Adding Custom HTTP Proxy for download videos !
+<br/>
+
 <h2>Record M3U8 and M3U Videos</h2>
 <b style="color:blue">You can save most of online videos services.</b>
 
-<br/>
-<b>Update: </b> Adding Custom HTTP Proxy for download videos !
 <br/>
 
 <h2>Split video by time</h2>
