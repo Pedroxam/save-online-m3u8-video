@@ -14,6 +14,10 @@ if(isset($_POST['log'])) {
 // Remove all illegal characters from a url
 $url = filter_var(trim($_POST['url']), FILTER_SANITIZE_URL);
 
+if(isset($_POST['proxy']) && !empty($_POST['proxy])){
+    $proxy = "-http_proxy " . trim($_POST['proxy']);
+} else $proxy = "";
+
 // Validate url
 if (!filter_var($url, FILTER_VALIDATE_URL)) {
     exit('error');
@@ -23,7 +27,7 @@ $output = $root . '/output/' . time() . '_';
 
 $time = intval($_POST['time']);
 
-$command = "ffmpeg -i $url -c copy -flags +global_header -f segment -segment_time $time -segment_format_options movflags=+faststart -reset_timestamps 1 $output%d.mp4";
+$command = "ffmpeg $proxy -i $url -c copy -flags +global_header -f segment -segment_time $time -segment_format_options movflags=+faststart -reset_timestamps 1 $output%d.mp4";
 
 $log = './log.txt';
 
