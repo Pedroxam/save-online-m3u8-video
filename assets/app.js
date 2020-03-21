@@ -78,6 +78,7 @@ $(document).ready(function(){
 	$('#start').click(function(){
 		var m3u8 = $('#url').val();
 		var time = $('#time').val();
+		var proxy = $('#proxy').val();
 		var that = this;
 
 		if(m3u8 === "") {
@@ -91,7 +92,8 @@ $(document).ready(function(){
 			url:'./start.php',
 			data: {
 				url: m3u8,
-				time: time
+				time: time,
+				proxy: proxy
 			}
 		})
 			.done(function(result){
@@ -141,11 +143,10 @@ $(document).ready(function(){
 						else {
 							location.reload();
 						}
-						
 					}
 					else {
-							location.reload();
-						}
+						location.reload();
+					}
 			});
 	});
 });
