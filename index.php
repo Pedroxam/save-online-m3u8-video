@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FFmpeg Command Execution</title>
+    <title>FFmpeg M3U8 Downloader</title>
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
-		.preview,.timer,.log{display:none;}
+	.preview,.timer,.log{display:none;}
         .log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
     </style>
 </head>
@@ -41,7 +41,7 @@
 
                 <div class="form-group">
                     <label for="time">Split video by time (in seconds)</label>
-                    <input type="number" id="time" class="form-control" value="60">
+                    <input type="number" id="time" class="form-control" value="30">
                 </div>
 
                 <div class="form-group">
@@ -70,9 +70,9 @@
                     <div id="log" class="log"></div>
                 </div>
 				
-                <h5 class="text-muted text-center">Preview</h5>
                 <div class="col-md-12 mt-4">
                     <div id="preview" class="preview text-center">
+						<h5 class="text-muted text-center">Preview</h5>
 						<small class="text-warning">Note: Some videos not play in here!</small>
 						<video id="video" style="width: 100%; height: 100%;" controls></video>
 					</div>
