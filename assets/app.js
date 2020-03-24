@@ -40,9 +40,10 @@ function showProgress(){
 			log: true
 		}
 	})
-		.done(function(content){
-			$('.log').html(content);
-		});
+	.done(function(content){
+		$('.log').html(content);
+		$('.log').scrollTop(999999999999);
+	});
 }
 
 /*
