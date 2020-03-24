@@ -1,7 +1,7 @@
 # save-online-m3u8-video
 Record and preview online m3u8 and m3u Videos, including split videos by time and concate videos.
 
-You can record any online m3u8 videos with specfield time.
+You can record any online m3u8 videos with specfield time. also 95% encrypted streams is now worked on this script.
 
 Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</a> installed on your server.
 
@@ -9,6 +9,7 @@ Enter stream video url in first field and enter seconds time on second field. cl
 
 <br/>
 <b>Update: </b> Adding Custom HTTP Proxy for download videos !
+<br/>
 <br/>
 
 <h2>Record M3U8 and M3U Videos</h2>
