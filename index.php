@@ -24,7 +24,7 @@
                 <div class="col my-3">
 
                     <ul class="list-group-item">
-                        <?php foreach(glob('output/*') as $file): ?>
+                        <?php foreach(glob('output/*.mp4') as $file): ?>
                             <li class="list-group mt-2">
                                 <a target="_blank" href="<?php echo $file; ?>"><?php echo basename($file); ?></a>
                             </li>
