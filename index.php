@@ -72,7 +72,7 @@
 				
                 <div class="col-md-12 mt-4">
                     <div id="preview" class="preview text-center">
-						<h5 class="text-muted text-center">Preview</h5>
+						<h5 class="text-muted">Preview</h5>
 						<small class="text-warning">Note: Some videos not play in here!</small>
 						<video id="video" style="width: 100%; height: 100%;" controls></video>
 					</div>
