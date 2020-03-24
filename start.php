@@ -14,7 +14,7 @@ if(isset($_POST['log'])) {
 // Remove all illegal characters from a url
 $url = filter_var(trim($_POST['url']), FILTER_SANITIZE_URL);
 
-if(isset($_POST['proxy']) && !empty($_POST['proxy])){
+if(isset($_POST['proxy']) && !empty($_POST['proxy'])){
     $proxy = "-http_proxy " . trim($_POST['proxy']);
 } else $proxy = "";
 
