@@ -2,6 +2,10 @@
 Record and preview online m3u8 and m3u Videos, including split videos by time and concate videos.
 
 You can record any online m3u8 videos with specfield time. also 95% encrypted streams is now worked on this script.
+<br/>
+
+<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/capt.png" alt="m3u8 video php saver screenshot">
+<br/>
 
 Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</a> installed on your server.
 <br/><br/>
@@ -39,8 +43,6 @@ Enter Start Number in the first field and End number to second field, for the st
 <h2>Live FFmpeg Logs</h2>
 <b style="color:blue">You can see live ffmpeg logs.</b>
 <br/>
-
-<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/capt.png" alt="m3u8 video php saver screenshot">
 
 <h3>Windows Notes:</h3>
 
