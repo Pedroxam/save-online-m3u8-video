@@ -33,9 +33,9 @@ $log = './log.txt';
 
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
 {
-    pclose(popen("start /B " . $command . " 1> $log 2>&1", "r")); // windows
+    pclose(popen("start /B " . $command . " 1> $log 2>&1", "r")); // Windows
 }
 else
 {
-    shell_exec($command . " 1> $log 2>&1 >/dev/null &"); //linux
+    shell_exec($command . " 1> $log 2>&1 >/dev/null &"); //Linux
 }
