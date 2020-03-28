@@ -25,7 +25,7 @@ $url = filter_var(trim($_POST['ts']), FILTER_SANITIZE_URL);
 if (!filter_var($url, FILTER_VALIDATE_URL))
 	exit('Please Enter Valid URL');
 
-echo 'Please Refresh Page ====> ';
+echo 'Please Refresh Page and Click on "Force Concat" ====> ';
 
 for ($i=intval($_POST['start']);$i<=intval($_POST['end']);$i++){
 	
@@ -35,7 +35,7 @@ for ($i=intval($_POST['start']);$i<=intval($_POST['end']);$i++){
 	$put = file_put_contents($output, useCurl($video));
 
 	if($put)
-		echo "Chunk number $i was downloaded. \n";
+		echo "\n Chunk number $i was downloaded. \n";
 }
 
 function useCurl($url){
