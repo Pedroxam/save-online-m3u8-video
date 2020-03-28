@@ -25,6 +25,8 @@ $url = filter_var(trim($_POST['ts']), FILTER_SANITIZE_URL);
 if (!filter_var($url, FILTER_VALIDATE_URL))
 	exit('Please Enter Valid URL');
 
+echo 'Please Refresh Page ====> ';
+
 for ($i=intval($_POST['start']);$i<=intval($_POST['end']);$i++){
 	
 	$video = str_ireplace('OUT', $i, $url);
