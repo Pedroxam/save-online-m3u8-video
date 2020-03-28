@@ -15,7 +15,12 @@ if(file_exists('./list.txt')) @unlink('./list.txt');
 
 foreach($files as $file){
 	if(!preg_match('/concated/',$file)){
-		file_put_contents('./list.txt', "file '$file'" . "\n", FILE_APPEND);
+		
+		$ext = pathinfo($file, PATHINFO_EXTENSION);
+		
+			if($ext == 'mp4'){
+				file_put_contents('./list.txt', "file '$file'" . "\n", FILE_APPEND);
+			}
 	}
 }
 
