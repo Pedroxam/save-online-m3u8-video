@@ -5,8 +5,12 @@
     <title>FFmpeg M3U8 Downloader</title>
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
-	.preview,.timer,.log{display:none;}
-        .log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
+		.preview,.timer,.log {display:none;}
+       		.log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
+		.file_list, .file_list img, .file_list div {-webkit-transition: all 250ms ease-in;transition: all 250ms ease-in;}
+		.file_list div:hover { transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;transform: scale(1.03);}
+		.file_list a:hover {text-decoration: none;}
+		.file_list img:hover {box-shadow: 1px -1px 7px #999 !important}
     </style>
 </head>
 <body class="my-3" style="background:#EEE;">
@@ -20,16 +24,36 @@
             <div class="col shadow p-4 bg-white">
 
                 <h5 class="text-center mb-4">Video List</h5>
-
                 <div class="col my-3">
-
-                    <ul class="list-group-item">
-                        <?php foreach(glob('output/*.mp4') as $file): ?>
-                            <li class="list-group mt-2">
-                                <a target="_blank" href="<?php echo $file; ?>"><?php echo basename($file); ?></a>
-                            </li>
+                    <div class="row file_list">
+                        <?php foreach(glob('./output/*.mp4') as $file): ?>
+                        <?php if(strpos($file, 'concat') !== false): ?>
+							<?php 
+								if(file_exists( $screenshot = $file . '.jpg' )):
+							?>
+								<div class="col-lg-3 col-md-6 col-sm-12 mb-1">
+									<a target="_blank" href="<?php echo $file; ?>" title="View File: <?php echo basename($file); ?>">
+										<img class="img-fluid w-100 shadow" alt="screenshot" src="./<?= $screenshot; ?>">
+									<span class="btn btn-sm btn-secondary btn-block rounded-0">
+									<?php echo basename($file); ?></span>
+									</a>
+								</div>
+							<?php	
+								else:
+							?>
+								<div class="col-lg-3 col-md-6 col-sm-12 mb-1">
+									<a target="_blank" href="<?php echo $file; ?>" title="View File">
+										<img class="img-fluid w-100 shadow" alt="screenshot" src="./output/default.jpg">
+									</a>
+									<button class="btn btn-sm btn-primary btn-block rounded-0"
+										data-file="<?php echo trim($file); ?>">Generate Screenshot</button>
+								</div>
+							<?php	
+								endif;
+								endif;
+							?>
                         <?php endforeach; ?>
-                    </ul>
+                    </div>
                 </div>
 
                 <hr>
