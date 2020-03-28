@@ -12,7 +12,7 @@ if(!isset($_POST['video']) && empty($_POST['video']))
 
 $video = trim($_POST['video']);
 
-$command = "ffmpeg -i $video -deinterlace -an -ss 1 -t 00:00:05 -r 1 -y -vcodec mjpeg -f mjpeg $video.jpg";
+$command = "ffmpeg -i $video -deinterlace -an -ss 1 -t 00:00:05 -s 242:183 -r 1 -y -vcodec mjpeg -f mjpeg $video.jpg";
 
 if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
 {
@@ -25,3 +25,4 @@ else
 
 
 exit(true);
+
