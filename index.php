@@ -5,8 +5,8 @@
     <title>FFmpeg M3U8 Downloader</title>
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
-		.preview,.timer,.log {display:none;}
-       		.log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
+		.preview,.timer,.log, .rapid_log {display:none;}
+        .log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
 		.file_list, .file_list img, .file_list div {-webkit-transition: all 250ms ease-in;transition: all 250ms ease-in;}
 		.file_list div:hover { transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;transform: scale(1.03);}
 		.file_list a:hover {text-decoration: none;}
@@ -24,10 +24,16 @@
             <div class="col shadow p-4 bg-white">
 
                 <h5 class="text-center mb-4">Video List</h5>
+
                 <div class="col my-3">
                     <div class="row file_list">
                         <?php foreach(glob('./output/*.mp4') as $file): ?>
-                        <?php if(strpos($file, 'concat') !== false): ?>
+                        <?php
+							if(
+							  strpos($file, 'concat') !== false ||
+							  strpos($file, 'rapid') !== false
+							):
+						 ?>
 							<?php 
 								if(file_exists( $screenshot = $file . '.jpg' )):
 							?>
@@ -70,7 +76,7 @@
 
                 <div class="form-group">
                     <label for="time">Proxy Setting (optional)</label>
-                    <input type="text" id="proxy" class="form-control" value="" placeholder="192.0.0.0:3128">
+                    <input type="text" id="proxy" class="form-control" placeholder="192.0.0.0:3128">
                 </div>
 
                 <div class="col-md-12 text-center my-2">
@@ -79,6 +85,9 @@
                     </button>
                     <button id="stop" class="btn btn-success text-white disabled">
                         Stop Record
+                    </button>
+                    <button id="concat" class="btn btn-secondary text-white">
+                        Force Concat
                     </button>
                 </div>
 
@@ -96,10 +105,47 @@
 				
                 <div class="col-md-12 mt-4">
                     <div id="preview" class="preview text-center">
-						<h5 class="text-muted">Preview</h5>
+						<h5 class="text-muted text-center">Preview</h5>
 						<small class="text-warning">Note: Some videos not play in here!</small>
 						<video id="video" style="width: 100%; height: 100%;" controls></video>
 					</div>
+                </div>
+				
+				<hr/>
+				
+			    <h5 class="text-primary text-center">Second Tools</h5>
+				
+                <div class="col-md-12 mt-4">
+					<h5 class="text-muted text-center">Rapid Saver (chunk files)</h5>
+					
+						<div class="form-group">
+							<label for="time">Start From</label>
+							<input type="number" id="s" class="form-control" value="1">
+						</div>
+
+						<div class="form-group">
+							<label for="time">To End</label>
+							<input type="number" id="e" class="form-control" value="30">
+						</div>
+
+						<div class="form-group">
+							<label for="time">Direct TS Link</label>
+							<input type="url" id="ts" class="form-control" placeholder="http://" autocomplete="off">
+							<small class="text-danger">User "OUT" instead of chunk number. Example: index04.ts must be indexOUT.ts<small>
+						</div>
+					
+						<div class="form-group text-center">
+							<button id="rapid" class="btn btn-primary text-white">
+								Save Now
+							</button>
+						</div>
+					
+						<div class="form-group text-center">
+							<p class="text-dark rapid_log"></p>
+						</div>
+					
+                </div>
+				
                 </div>
 
             </div>
