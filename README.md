@@ -4,13 +4,20 @@ Record and preview online m3u8 and m3u Videos, including split videos by time an
 You can record any online m3u8 videos with specfield time. also 95% encrypted streams is now worked on this script.
 
 Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</a> installed on your server.
-
+<br/>
+First Tools (Stream Downloader):
 Enter stream video url in first field and enter seconds time on second field. click on record button. for example if you enter 60 seconds, the video file cuts for every 60 seconds, and with stop button, you can view confirm box to set concat all files to 1 file. 
 
 <br/>
-<b>Update: </b> Adding Custom HTTP Proxy for download videos !
+Second Tools (Chunk Downloader):
+Enter Start Number in the first field and End number to second field, for the staring download targe ".ts" video.
+
 <br/>
+<b>Update 1: </b> Adding Custom HTTP Proxy for download videos !
 <br/>
+<b>Update 2: </b> Adding Stream CHUNK downloader !
+<br/>
+<b>Update 3: </b> Adding ScreenShot video viewer for file !
 
 <h2>Record M3U8 and M3U Videos</h2>
 <b style="color:blue">You can save most of online videos services.</b>
@@ -34,7 +41,7 @@ Enter stream video url in first field and enter seconds time on second field. cl
 <b style="color:blue">You can see live ffmpeg logs.</b>
 <br/>
 
-<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/preview.png">
+<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/capt.png" alt="m3u8 video php saver screenshot">
 
 <h3>Windows Notes:</h3>
 
