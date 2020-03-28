@@ -119,6 +119,25 @@ $(document).ready(function(){
 				}
 			});
 	});
+	
+	/**
+	 * Screenshot Generator
+	 */
+	$('.file_list button').click(function(){
+		$(this).html('Wait...');
+		$.ajax({
+			type:'POST',
+			url:'./screenshot.php',
+			data: {
+				video: $(this).data('file')
+			}
+		})
+		.done(function(content){
+			setTimeout(function(){
+				location.reload();
+			  }, 1200);
+		});
+	});
 
 	/**
 	 * Stop Record Video
