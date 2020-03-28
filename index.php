@@ -49,7 +49,7 @@
 								else:
 							?>
 								<div class="col-lg-3 col-md-6 col-sm-12 mb-1">
-									<a target="_blank" href="<?php echo $file; ?>" title="View File">
+									<a target="_blank" href="<?php echo $file; ?>" title="View File: <?php echo basename($file); ?>">
 										<img class="img-fluid w-100 shadow" alt="screenshot" src="./output/default.jpg">
 									</a>
 									<button class="btn btn-sm btn-primary btn-block rounded-0"
