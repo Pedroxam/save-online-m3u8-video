@@ -24,7 +24,7 @@ function SetProgressStart(m3u8) {
 		  hls.on(Hls.Events.MANIFEST_PARSED,function() {
 			video.play();
 		  });
-		}
+		} else alert('Stream play not supported in your browser.');
 		
 	doProgress = setInterval( showProgress, 5000 );
 }
@@ -86,21 +86,21 @@ $(document).ready(function(){
 			return alert('Please enter m3u8 url');
 		}
 
-		$(that).addClass('disabled');
+		$(that).attr('disabled', true);
 
-		$.ajax({
-			type:'POST',
-			url:'./start.php',
-			data: {
-				url: m3u8,
-				time: time,
-				proxy: proxy
-			}
-		})
+			$.ajax({
+				type:'POST',
+				url:'./start.php',
+				data: {
+					url: m3u8,
+					time: time,
+					proxy: proxy
+				}
+			})
 			.done(function(result){
 				if(result === 'error'){
 					alert('ERROR: Invalid URL');
-					$(that).removeClass('disabled');
+					$(that).attr('disabled', false);
 				}
 				else {
 					var seconds = 0;
@@ -113,30 +113,11 @@ $(document).ready(function(){
 					$('.log').show();
 					$('.preview').show();
 					$('.timer').show();
-					$('#stop').removeClass('disabled');
+					$('#stop').attr('disabled', false);
 
 					SetProgressStart(m3u8);
 				}
 			});
-	});
-	
-	/**
-	 * Screenshot Generator
-	 */
-	$('.file_list button').click(function(){
-		$(this).html('Wait...');
-		$.ajax({
-			type:'POST',
-			url:'./screenshot.php',
-			data: {
-				video: $(this).data('file')
-			}
-		})
-		.done(function(content){
-			setTimeout(function(){
-				location.reload();
-			  }, 1200);
-		});
 	});
 
 	/**
@@ -147,7 +128,7 @@ $(document).ready(function(){
 			type:'POST',
 			url:'./stop.php'
 		})
-			.done(function(result){
+			.done(function(){
 				
 				var timer = parseInt($('#el').val()),
 					split = parseInt($('#time').val());
@@ -168,5 +149,63 @@ $(document).ready(function(){
 						location.reload();
 					}
 			});
+	});
+
+	/**
+	 * Force Concat Video
+	 */
+	$('#concat').click(function(){
+		concatVideos();
+	});
+
+	/**
+	 * Screenshot Generator
+	 */
+	$('.file_list button').click(function(){
+		$(this).html('Wait...');
+		$.ajax({
+			type:'POST',
+			url:'./screenshot.php',
+			data: {
+				video: $(this).data('file')
+			}
+		})
+		.done(function(content){
+			setTimeout(function(){
+				location.reload();
+			  }, 1200);
+		});
+	});
+
+	/**
+	 * Rapid Saver TS Videos
+	 */
+	$('#rapid').click(function(){
+		var that = this;
+		
+		if(!$('#s').val()) return;
+		if(!$('#e').val()) return;
+		if(!$('#ts').val()) return;
+		
+		$.ajax({
+			type:'POST',
+			url:'./rapid.php',
+			data: {
+				start: $('#s').val(),
+				end: $('#e').val(),
+				ts: $('#ts').val(),
+			},
+			beforeSend:function(){
+				$('.rapid_log').show();
+				$('.rapid_log').html('Downloading Video, Please Wait...');
+				$(that).attr('disabled', true);
+			},
+			success:function(result){
+				$(that).attr('disabled', false);
+				
+				if(result !== '')
+					$('.rapid_log').html(result);
+			},
+		});
 	});
 });
