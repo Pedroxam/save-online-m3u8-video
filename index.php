@@ -28,6 +28,7 @@
                 <div class="col my-3">
                     <div class="row file_list">
                         <?php foreach(glob('./output/*.mp4') as $file): ?>
+                        <?php if(filesize($file) > 900): //900 byte ?>
                         <?php
 							if(
 							  strpos($file, 'concat') !== false ||
@@ -55,6 +56,7 @@
 										data-file="<?php echo trim($file); ?>">Generate Screenshot</button>
 								</div>
 							<?php	
+								endif;
 								endif;
 								endif;
 							?>
