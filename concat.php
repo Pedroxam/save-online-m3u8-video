@@ -19,7 +19,8 @@ foreach($files as $file){
 		$ext = pathinfo($file, PATHINFO_EXTENSION);
 		
 			if($ext == 'mp4'){
-				file_put_contents('./list.txt', "file '$file'" . "\n", FILE_APPEND);
+				if(filesize($file) > 100)
+					file_put_contents('./list.txt', "file '$file'" . "\n", FILE_APPEND);
 			}
 	}
 }
