@@ -135,7 +135,7 @@ $(document).ready(function(){
 					
 					calculate = parseInt(timer/split);
 				
-					if(calculate !== 0 && calculate >= 1){
+					if(calculate !== 0 && calculate > 1){
 						
 					var q = confirm('Do you want to cancat videos?');
 						if (q == true) {
