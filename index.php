@@ -77,6 +77,18 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="time">Record on time (optional)</label>
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<input type="text" id="from_time" class="form-control" placeholder="From Time / hh:mm:ss">
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<input type="text" id="to_time" class="form-control" placeholder="To Time / hh:mm:ss">
+						</div>
+					</div>
+                </div>
+
+                <div class="form-group">
                     <label for="time">Proxy Setting (optional)</label>
                     <input type="text" id="proxy" class="form-control" placeholder="192.0.0.0:3128">
                 </div>
