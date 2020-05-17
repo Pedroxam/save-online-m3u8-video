@@ -77,13 +77,16 @@ $(document).ready(function(){
 	 * Start Record Video
 	 */
 	$('#start').click(function(){
+		var that = this;
+		
 		var m3u8 = $('#url').val();
 		var time = $('#time').val();
 		var proxy = $('#proxy').val();
-		var that = this;
+		var from = $('#from_time').val();
+		var to = $('#to_time').val();
 
 		if(m3u8 === "") {
-			return alert('Please enter m3u8 url');
+			return alert('Please enter m3u8 / m3u url.');
 		}
 
 		$(that).attr('disabled', true);
@@ -94,7 +97,9 @@ $(document).ready(function(){
 				data: {
 					url: m3u8,
 					time: time,
-					proxy: proxy
+					proxy: proxy,
+					from: from,
+					to: to
 				}
 			})
 			.done(function(result){
