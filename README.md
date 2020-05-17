@@ -21,6 +21,8 @@ Enter Start Number in the first field and End number to second field, for the st
 <b>Update 2: </b> Adding Stream CHUNK downloader !
 <br/>
 <b>Update 3: </b> Adding ScreenShot video viewer for file !
+<br/>
+<b>Update 4: </b> Adding Record on time to stream downloader ! (record from start to end / etc: 01:50:10 => 01:50:15 can record 5 seconds)
 
 <h2>Record M3U8 and M3U Videos</h2>
 <b style="color:blue">You can save most of online videos services.</b>
