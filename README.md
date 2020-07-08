@@ -13,7 +13,7 @@ First Tools (Stream Downloader):<br/><br/>
 Enter stream video url in first field and enter seconds time on second field. click on record button. for example if you enter 60 seconds, the video file cuts for every 60 seconds, and with stop button, you can view confirm box to set concat all files to 1 file. 
 
 Second Tools (Chunk Downloader):<br/><br/>
-Enter Start Number in the first field and End number to second field, for the staring download targe ".ts" video.
+Enter Start Number in the first field and End number to second field, for the staring download target ".ts" video.
 
 <br/>
 <b>Update 1: </b> Adding Custom HTTP Proxy for download videos !
