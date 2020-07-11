@@ -6,15 +6,15 @@
     <link rel='stylesheet' href='./assets/bootstrap.min.css'>
     <style>
 		.preview,.timer,.log, .rapid_log {display:none;}
-        .log{white-space:pre-line;text-align:left;overflow-y:scroll;height:300px;}
+        .log { white-space:pre-line; text-align:left; overflow-y:scroll; height:300px;}
 		.file_list, .file_list img, .file_list div {-webkit-transition: all 250ms ease-in;transition: all 250ms ease-in;}
-		.file_list div:hover { transition: all 0.3s ease-out; -o-transition: all 0.3s ease-out; -ms-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out;transform: scale(1.03);}
 		.file_list a:hover {text-decoration: none;}
-		.file_list img:hover {box-shadow: 1px -1px 7px #999 !important}
+		.file_list img:hover {filter: contrast(1.2)}
+		.font-15 {font-size: 15px;}
     </style>
 </head>
-<body class="my-3" style="background:#EEE;">
-<div class="container">
+<body class="my-1" style="background:#EEE;">
+<div class="container-fluid">
 
     <div class="row">
         <div class="col-md-8 my-3 m-auto">
@@ -38,22 +38,33 @@
 							<?php 
 								if(file_exists( $screenshot = $file . '.jpg' )):
 							?>
-								<div class="col-lg-3 col-md-6 col-sm-12 mb-1">
-									<a target="_blank" href="<?php echo $file; ?>" title="View File: <?php echo basename($file); ?>">
-										<img class="img-fluid w-100 shadow" alt="screenshot" src="./<?= $screenshot; ?>">
-									<span class="btn btn-sm btn-secondary btn-block rounded-0">
-									<?php echo basename($file); ?></span>
-									</a>
+								<div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+									<div class="card">
+										<div class="card-body px-0 pt-0 text-center">
+												<img class="img-fluid w-100 shadow" alt="screenshot" src="./<?= $screenshot; ?>">
+												<h5 class="card-title mt-2 text-muted font-15">
+													<?php echo basename($file); ?>
+												</h5>
+											<button id="delete" class="btn btn-sm btn-danger mb-1" data-file="<?php echo trim($file); ?>">Delete</button>
+											<a class="btn btn-sm btn-success mb-1" href="<?php echo trim($file); ?>" target="_blank">View</a>
+										</div>
+									</div>
 								</div>
 							<?php	
 								else:
 							?>
-								<div class="col-lg-3 col-md-6 col-sm-12 mb-1">
-									<a target="_blank" href="<?php echo $file; ?>" title="View File: <?php echo basename($file); ?>">
-										<img class="img-fluid w-100 shadow" alt="screenshot" src="./output/default.jpg">
-									</a>
-									<button class="btn btn-sm btn-primary btn-block rounded-0"
-										data-file="<?php echo trim($file); ?>">Generate Screenshot</button>
+								<div class="col-lg-3 col-md-6 col-sm-12 mb-2">
+									<div class="card">
+										<div class="card-body px-0 pt-0 text-center">
+											<img class="img-fluid w-100 shadow" alt="screenshot" src="./output/default.jpg">
+											<h5 class="card-title mt-2 text-muted font-15">
+												<?php echo basename($file); ?>
+											</h5>
+											<button id="screenshot" class="btn btn-sm btn-secondary mb-1" data-file="<?php echo trim($file); ?>">Generate Screenshot</button>
+											<button id="delete" class="btn btn-sm btn-danger mb-1" data-file="<?php echo trim($file); ?>">Delete</button>
+											<a class="btn btn-sm btn-success mb-1" href="<?php echo trim($file); ?>" target="_blank">View</a>
+										</div>
+									</div>
 								</div>
 							<?php	
 								endif;
@@ -127,11 +138,14 @@
 				
 				<hr/>
 				
-			    <h5 class="text-primary text-center">Second Tools</h5>
-				
-                <div class="col-md-12 mt-4">
-					<h5 class="text-muted text-center">Rapid Saver (chunk files)</h5>
+                <div class="col-md-12 accordion mt-4" id="accordionExample">
+			<h5 class="text-muted text-center">
+						<button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						  Rapid Saver (chunk files)
+						</button>
+					</h5>
 					
+						<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
 						<div class="form-group">
 							<label for="time">Start From</label>
 							<input type="number" id="s" class="form-control" value="1">
@@ -156,6 +170,7 @@
 					
 						<div class="form-group text-center">
 							<p class="text-dark rapid_log"></p>
+						</div>
 						</div>
 					
                 </div>
