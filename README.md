@@ -4,7 +4,7 @@ Record and preview online m3u8 and m3u Videos, including split videos by time an
 You can record any online m3u8 videos with specfield time. also 95% encrypted streams is now worked on this script.
 <br/>
 
-<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/capt.png" alt="m3u8 video php saver screenshot">
+<img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/capt2.png" alt="m3u8 video php saver screenshot">
 <br/>
 
 Please make sure latest <a href="https://www.ffmpeg.org/" target="_blank">ffmpeg module</a> installed on your server.
