@@ -57,7 +57,7 @@ function concatVideos(){
 		.done(function(content){
 			setTimeout(function(){
 				location.reload();
-			  }, 2000);
+			  }, 3000);
 		});
 }
 
@@ -142,7 +142,8 @@ $(document).ready(function(){
 				
 					if(calculate !== 0 && calculate > 1){
 						
-					var q = confirm('Do you want to cancat videos?');
+						var q = confirm('Do you want to cancat videos?');
+					
 						if (q == true) {
 							concatVideos();
 						}
@@ -164,9 +165,16 @@ $(document).ready(function(){
 	});
 
 	/**
+	 * Remove Player
+	 */
+	$('#remove_player').click(function(){
+		$('#preview').remove();
+	});
+
+	/**
 	 * Screenshot Generator
 	 */
-	$('.file_list button').click(function(){
+	$('.file_list #screenshot').click(function(){
 		$(this).html('Wait...');
 		$.ajax({
 			type:'POST',
@@ -183,7 +191,29 @@ $(document).ready(function(){
 	});
 
 	/**
-	 * Rapid Saver TS Videos
+	 * Delete Video
+	 */
+	$('.file_list #delete').click(function(){
+		var q = confirm('Are your sure to delete this video ?');
+		if(q === true){
+			$(this).html('Wait...');
+			$.ajax({
+				type:'POST',
+				url:'./delete.php',
+				data: {
+					video: $(this).data('file')
+				}
+			})
+			.done(function(content){
+				setTimeout(function(){
+					location.reload();
+				  }, 500);
+			});
+		}
+	});
+
+	/**
+	 * Rapid Chunk Video Saver
 	 */
 	$('#rapid').click(function(){
 		var that = this;
