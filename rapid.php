@@ -25,17 +25,13 @@ $url = filter_var(trim($_POST['ts']), FILTER_SANITIZE_URL);
 if (!filter_var($url, FILTER_VALIDATE_URL))
 	exit('Please Enter Valid URL');
 
-echo 'Please Refresh Page and Click on "Force Concat" ====> ';
+echo '<button class="btn btn-danger" onclick="concatVideos()">Concat Videos</button>';
 
 for ($i=intval($_POST['start']);$i<=intval($_POST['end']);$i++){
-	
 	$video = str_ireplace('OUT', $i, $url);
 	$output = $root . '/output/' . 'rapid_' . time() . '_num_' . $i . '.mp4';
 	
-	$put = file_put_contents($output, useCurl($video));
-
-	if($put)
-		echo "\n Chunk number $i was downloaded. \n";
+	file_put_contents($output, useCurl($video));
 }
 
 function useCurl($url){
