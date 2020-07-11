@@ -128,10 +128,14 @@
                     <div id="log" class="log"></div>
                 </div>
 				
-                <div class="col-md-12 mt-4">
+                  <div class="col-md-12 mt-4">
                     <div id="preview" class="preview text-center">
+						<hr/>
 						<h5 class="text-muted text-center">Preview</h5>
-						<small class="text-warning">Note: Some videos not play in here!</small>
+						<small class="text-warning">
+							Note: Some videos can't playing here!
+							<button id="remove_player" class="btn btn-sm btn-secondary mb-2">Remove Player</button>
+						</small>
 						<video id="video" style="width: 100%; height: 100%;" controls></video>
 					</div>
                 </div>
