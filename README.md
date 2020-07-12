@@ -60,6 +60,10 @@ Enter Start Number in the first field and End number to second field, for the st
 
 - For stopping ffmpeg in windows, i put a simple excutable file called "pskill.exe". for use this file, first open and select agree of use.
 
+<h3>Usage Notes:</h3>
+
+- Don't forget, All ffmpeg tasks can run in the background, so when you close the page, the task can't be stop. for stopping ffmpeg task, just click on "Stop Record", this will run "kill ffmpeg command". you can press this button any time you want to make sure about stoping all ffmpeg tasks.
+
 <h3>Credits:</h3>
 
 <ul>
