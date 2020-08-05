@@ -18,7 +18,7 @@ Second Tools (Chunk Downloader):<br/><br/>
 Enter Start Number in the first field and End number to second field, for the staring download target ".ts" video.
 
 <br/>
-<b>Update 5: </b> Adding video conversion for stream downloaded videos. (can optimize and reduce size of stream recorded videos).
+<b>Update 5: </b> Adding video conversion button for stream downloaded videos. (can optimize and reduce size of stream recorded videos).
 <br/>
 <b>Update 4: </b> Adding Record on time to stream downloader ! (record from start to end / etc: 01:50:10 => 01:50:15 can record 5 seconds)
 <br/>
