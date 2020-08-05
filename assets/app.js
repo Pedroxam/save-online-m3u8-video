@@ -189,6 +189,25 @@ $(document).ready(function(){
 			  }, 1200);
 		});
 	});
+	
+	/**
+	 * Convert Video
+	 */
+	$('.file_list #convert').click(function(){
+	    $(this).html('Wait...');
+	    $('.log').show();
+	    doProgress = setInterval( showProgress, 5000 );
+		$.ajax({
+			type:'POST',
+			url:'./convert.php',
+			data: {
+				video: $(this).data('file')
+			}
+		})
+		.done(function(){
+			//Nothing 
+		});
+	});
 
 	/**
 	 * Delete Video
