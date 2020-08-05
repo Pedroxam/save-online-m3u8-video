@@ -47,6 +47,7 @@
 												</h5>
 											<button id="delete" class="btn btn-sm btn-danger mb-1" data-file="<?php echo trim($file); ?>">Delete</button>
 											<a class="btn btn-sm btn-success mb-1" href="<?php echo trim($file); ?>" target="_blank">View</a>
+											<button id="convert" class="btn btn-sm btn-primary mb-1" data-file="<?php echo trim($file); ?>">Convert</button>
 										</div>
 									</div>
 								</div>
@@ -63,6 +64,7 @@
 											<button id="screenshot" class="btn btn-sm btn-secondary mb-1" data-file="<?php echo trim($file); ?>">Generate Screenshot</button>
 											<button id="delete" class="btn btn-sm btn-danger mb-1" data-file="<?php echo trim($file); ?>">Delete</button>
 											<a class="btn btn-sm btn-success mb-1" href="<?php echo trim($file); ?>" target="_blank">View</a>
+											<button id="convert" class="btn btn-sm btn-primary mb-1" data-file="<?php echo trim($file); ?>">Convert</button>
 										</div>
 									</div>
 								</div>
