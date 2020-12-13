@@ -1,7 +1,7 @@
 # save-online-m3u8-video
-Record and preview online m3u8 and m3u Videos, including split videos by time and concate videos.
+Record and preview online m3u8 and m3u videos, including split videos by time and concate videos.
 
-You can record any online videos with specfield time.
+You can record must of online videos with specfield time.
 <br/>
 
 <img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/shot2.png" alt="m3u8 video php saver screenshot">
@@ -18,15 +18,15 @@ Second Tools (Chunk Downloader):<br/><br/>
 Enter Start Number in the first field and End number to second field, for the staring download target ".ts" video.
 
 <br/>
-<b>Update 5: </b> Adding video conversion button for stream downloaded videos. (can optimize and reduce size of stream recorded videos).
+<b>Update 5: </b> Added video conversion button for stream downloaded videos. (can optimize and reduce size of stream recorded videos).
 <br/>
-<b>Update 4: </b> Adding Record on time to stream downloader ! (record from start to end / etc: 01:50:10 => 01:50:15 can record 5 seconds)
+<b>Update 4: </b> Added Record on time to stream downloader ! (record from start to end / etc: 01:50:10 => 01:50:15 can record 5 seconds)
 <br/>
-<b>Update 3: </b> Adding ScreenShot video viewer for file.
+<b>Update 3: </b> Added ScreenShot video viewer for file.
 <br/>
-<b>Update 2: </b> Adding Stream CHUNK downloader.
+<b>Update 2: </b> Added Stream CHUNK downloader. (I don't know why I added this, but in some cases it really helps!)
 <br/>
-<b>Update 1: </b> Adding Custom HTTP Proxy for download videos.
+<b>Update 1: </b> Added Custom HTTP Proxy for download videos.
 
 <h2>Record M3U8 and M3U Videos</h2>
 <b style="color:blue">Save most of online videos services.</b>
