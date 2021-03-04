@@ -165,7 +165,7 @@
 						<div class="form-group">
 							<label for="time">Direct TS Link</label>
 							<input type="url" id="ts" class="form-control" placeholder="http://" autocomplete="off">
-							<small class="text-danger">User "OUT" instead of chunk number. Example: index04.ts must be indexOUT.ts<small>
+							<small class="text-danger">Use "OUT" instead of chunk number. Example: index04.ts must be indexOUT.ts<small>
 						</div>
 					
 						<div class="form-group text-center">
