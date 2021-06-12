@@ -1,7 +1,7 @@
 # save-online-m3u8-video
 Record and preview online m3u8 and m3u videos, including split videos by time and concate videos.
 
-You can record must of online videos with specfield time.
+You can save videos from must of stream video sites !
 <br/>
 
 <img src="https://raw.githubusercontent.com/Pedroxam/save-online-m3u8-video/master/shot2.png" alt="m3u8 video php saver screenshot">
