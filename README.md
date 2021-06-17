@@ -77,4 +77,4 @@ Enter Start Number in the first field and End number to second field, for the st
 <li>pskill</li>
 </ul>
 
-Enjoy
+Thanks
