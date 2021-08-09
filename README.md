@@ -55,7 +55,7 @@ Enter Start Number in the first field and End number to second field, for the st
 <br/>
 
 <h2>Stream Chunk Downloader</h2>
-<b style="color:blue">Simple stream chunk downloader. (just with php)</b>
+<b style="color:blue">Simple stream chunk downloader. (pure php)</b>
 <br/> 
 
 <h3>Windows Notes:</h3>
