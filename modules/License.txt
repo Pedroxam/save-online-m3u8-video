@@ -1,0 +1,13 @@
+/**
+ * FFmpeg License
+ * https://www.ffmpeg.org/legal.html
+*/
+========================
+FFmpeg is licensed under the GNU Lesser General Public License (LGPL) version 2.1or later:
+http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
+========================
+However, FFmpeg incorporates several optional parts and optimizations that are covered 
+by the GNU General Public License (GPL) version 2 or later:
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+If those parts get used the GPL applies to all of FFmpeg.
+========================
