@@ -83,4 +83,6 @@ Enter Start Number in the first field and End number to second field, for the st
 Thanks
 
 Buy me a coffee
+<br/> 
+
 Bitcoin : <b>37fNgQ3ZVYwP511SVA7s12rfETzzitPBPp</b>
